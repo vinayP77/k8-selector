@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: toleration04
+   labels:
+     purpose: "toleration04-demo"
+spec:
+    nodeSelector:
+      topology.kubernetes.io/zone: us-east-1d
+    containers:
+    - name: nginx 
+      image: nginx
+    tolerations:
+    - key: "hardware"
+      operator: "Equal"
+      value: "gpu"
+      effect: "NoExecute"
