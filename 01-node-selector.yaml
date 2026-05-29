@@ -3,7 +3,7 @@ kind: Pod
 metadata:
    name: node-selector
    labels:
-     purpose: "selector -demo"
+     purpose: "selector-demo"
 spec:
     nodeSelector:
       topology.kubernetes.io/zone: us-east-1c
